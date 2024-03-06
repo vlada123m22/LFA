@@ -170,7 +170,8 @@ B -- b --> B
 B -- c --> ε
 Grammar Classification: Type 2 : Context-Free
 ```
-* If needed, screenshots.
+* Visualization
+![img_3.png](img_3.png)
 
 
 ## Conclusion
