@@ -40,10 +40,10 @@ After tokenization, the script prints out each token's type and value.
 ## Results:
 #### A sequence from the output message:
 ```
-R_CURLY }
-RETURN return
-IDENTIFIER sum
-SEMICOLON ;
+BEGGINING OF ELSE BLOCK:  else
+RETURN STATEMENT:  return
+MINUS -
+INTEGER 1
 R_CURLY }
 ```
 

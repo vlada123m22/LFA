@@ -6,13 +6,13 @@ class Token:
         self.value = value
 
 KEYWORDS = {
-    'if': 'IF',
-    'else': 'ELSE',
-    'function': 'FUNCTION',
-    'return': 'RETURN',
-    'let': 'LET',
-    'true': 'TRUE',
-    'false': 'FALSE'
+    'if': 'BEGGINING OF IF BLOCK: ',
+    'else': 'BEGGINING OF ELSE BLOCK: ',
+    'fun': 'FUNCTION DECLARATION: ',
+    'return': 'RETURN STATEMENT: ',
+    'let': 'VARIABLE DECLARATION: ',
+    'true': 'TRUE: ',
+    'false': 'FALSE: '
 }
 
 OPERATOR = {
@@ -93,15 +93,16 @@ class Lexer:
             next_token = self.next_token()
         return tokens
 
-input1 = "12 + 24 - 8"
-input2 = "12 + (variableName - 34) * 56 / variable_2"
-input3 = "if (x > 10) { function doSomething() { return x; } }"
-input4 = """function addArray(arr, n) {
+input4 = """fun addArray(arr, n) {
+    let a = 5;
+    let b = 6;
     let sum = 0;
     for(int i = 0; i < n; i++) {
         sum += arr[i];
     }
-    return sum;
+    if (sum<10)
+        return sum;
+    else return -1
 }"""
 lexer = Lexer(input4)
 tokens = lexer.tokenize()
